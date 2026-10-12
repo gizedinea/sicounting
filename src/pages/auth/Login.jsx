@@ -3,7 +3,7 @@ import { supabase } from "../../lib/supabase";
 import { Link, useNavigate } from "react-router-dom";
 import "./auth.css";
 import { useTheme } from "../../context/ThemeContext";
-import "./auth.css";
+import "./Auth.css";
 function Login() {
   const navigate = useNavigate();
   const { theme } = useTheme();
