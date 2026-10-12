@@ -1,0 +1,1467 @@
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+
+  border-right: 1px solid;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* ========================================
+   LIGHT MODE
+======================================== */
+
+.sidebar-light {
+  background: #ffffff;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+.sidebar-light .sidebar-section-title {
+  color: #9ca3af;
+}
+
+.sidebar-light .sidebar-link {
+  color: #4b5563;
+}
+
+.sidebar-light .sidebar-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.sidebar-light .sidebar-link.active {
+  background: linear-gradient(
+    135deg,
+    #20c982,
+    #2585ed
+  );
+
+  color: #ffffff;
+}
+
+.sidebar-light .sidebar-icon {
+  color: inherit;
+}
+
+.sidebar-light .sidebar-user {
+  border-top-color: #e5e7eb;
+}
+
+.sidebar-light .sidebar-user-name {
+  color: #111827;
+}
+
+.sidebar-light .sidebar-user-role {
+  color: #9ca3af;
+}
+
+.sidebar-light .sidebar-avatar {
+  background: #e8f7f1;
+  color: #20a875;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+.sidebar-dark {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #1f2937;
+}
+
+.sidebar-dark .sidebar-section-title {
+  color: #6b7280;
+}
+
+.sidebar-dark .sidebar-link {
+  color: #9ca3af;
+}
+
+.sidebar-dark .sidebar-link:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.sidebar-dark .sidebar-link.active {
+  background: linear-gradient(
+    135deg,
+    #20c982,
+    #2585ed
+  );
+
+  color: #ffffff;
+}
+
+.sidebar-dark .sidebar-icon {
+  color: inherit;
+}
+
+.sidebar-dark .sidebar-user {
+  border-top-color: #1f2937;
+}
+
+.sidebar-dark .sidebar-user-name {
+  color: #f9fafb;
+}
+
+.sidebar-dark .sidebar-user-role {
+  color: #6b7280;
+}
+
+.sidebar-dark .sidebar-avatar {
+  background: #173c35;
+  color: #20c982;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.sidebar-logo {
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 24px;
+
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.sidebar-light .logo-text {
+  color: #111827;
+}
+
+.sidebar-dark .logo-text {
+  color: #ffffff;
+}
+
+.logo-dot {
+  color: #20c982;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.sidebar-nav {
+  flex: 1;
+
+  padding: 18px 14px;
+
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-section-title {
+  margin: 0 0 8px;
+
+  padding: 0 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+/* ========================================
+   LINK
+======================================== */
+
+.sidebar-link {
+  width: 100%;
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 12px;
+
+  margin-bottom: 4px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.sidebar-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ========================================
+   FOOTER USER
+======================================== */
+
+.sidebar-footer {
+  padding: 14px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 14px 8px;
+
+  border-top: 1px solid;
+}
+
+.sidebar-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sidebar-user-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.sidebar-user-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sidebar-user-role {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 250px;
+  right: 0;
+
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 0 28px;
+
+  box-sizing: border-box;
+  z-index: 900;
+
+  border-bottom: 1px solid;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+.header-light {
+  background: #ffffff;
+  border-color: #e8edf2;
+  color: #202832;
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+.header-dark {
+  background: #111827;
+  border-color: #252d3a;
+  color: #f3f4f6;
+}
+
+
+/* =========================================================
+   HEADER LEFT
+========================================================= */
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+}
+
+.header-title {
+  min-width: 0;
+}
+
+.header-title h1 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 750;
+
+  line-height: 1.3;
+  letter-spacing: -0.45px;
+}
+
+.header-title p {
+  margin: 5px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+
+  transition: color 0.25s ease;
+}
+
+.header-light .header-title p {
+  color: #8a96a3;
+}
+
+.header-dark .header-title p {
+  color: #8d98a8;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   THEME BUTTON & NOTIFICATION BUTTON
+========================================================= */
+
+.theme-toggle,
+.header-icon-button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle svg,
+.header-icon-button svg {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+}
+
+
+/* Light */
+
+.header-light .theme-toggle,
+.header-light .header-icon-button {
+  background: #f8fafc;
+  border-color: #e5eaf0;
+  color: #66717d;
+}
+
+.header-light .theme-toggle:hover,
+.header-light .header-icon-button:hover {
+  background: #effbf5;
+  border-color: #cceee0;
+  color: #20a875;
+
+  transform: translateY(-1px);
+}
+
+
+/* Dark */
+
+.header-dark .theme-toggle,
+.header-dark .header-icon-button {
+  background: #182130;
+  border-color: #2b3545;
+  color: #aeb8c5;
+}
+
+.header-dark .theme-toggle:hover,
+.header-dark .header-icon-button:hover {
+  background: #202c3d;
+  border-color: #344357;
+  color: #20c982;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.notification-dot {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+  border: 2px solid;
+}
+
+.header-light .notification-dot {
+  border-color: #f8fafc;
+}
+
+.header-dark .notification-dot {
+  border-color: #182130;
+}
+
+
+/* =========================================================
+   HEADER USER / PROFILE
+========================================================= */
+
+.header-user-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Tetap menggunakan class header-user dari JSX */
+
+button.header-user {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+  max-width: 280px;
+
+  margin-left: 3px;
+  padding: 6px 10px 6px 6px;
+
+  border: 1px solid transparent;
+  border-radius: 13px;
+
+  background: transparent;
+  color: inherit;
+
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.header-light button.header-user:hover,
+.header-light button.header-user[aria-expanded="true"] {
+  background: #f5f8fa;
+  border-color: #e8edf2;
+}
+
+.header-dark button.header-user:hover,
+.header-dark button.header-user[aria-expanded="true"] {
+  background: #1a2433;
+  border-color: #2b3545;
+}
+
+
+/* Avatar */
+
+.header-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #20c982,
+    #2585ed
+  );
+
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow: 0 3px 8px rgba(32, 201, 130, 0.16);
+}
+
+
+/* User information */
+
+.header-user-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+  min-width: 0;
+}
+
+.header-user-name {
+  display: block;
+
+  max-width: 165px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.header-user-role {
+  display: block;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.header-light .header-user-role {
+  color: #919ca8;
+}
+
+.header-dark .header-user-role {
+  color: #8995a5;
+}
+
+
+/* Chevron */
+
+.header-chevron {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+  margin-left: 2px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.header-light .header-chevron {
+  color: #8995a1;
+}
+
+.header-dark .header-chevron {
+  color: #8995a5;
+}
+
+.header-user[aria-expanded="true"] .header-chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   USER DROPDOWN
+========================================================= */
+
+.header-user-dropdown {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 270px;
+  max-width: calc(100vw - 90px);
+
+  padding: 10px;
+
+  border: 1px solid #e5eaf1;
+  border-radius: 15px;
+
+  background: #ffffff;
+  color: #202832;
+
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.14);
+
+  box-sizing: border-box;
+  z-index: 1100;
+
+  animation: headerDropdownIn 0.18s ease-out;
+}
+
+.header-dark .header-user-dropdown {
+  background: #182130;
+  color: #f3f4f6;
+
+  border-color: #2b3545;
+
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Informasi profil dalam dropdown */
+
+.dropdown-user-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  min-width: 0;
+
+  padding: 12px;
+}
+
+.dropdown-user-info strong {
+  overflow-wrap: anywhere;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.dropdown-user-info span {
+  overflow-wrap: anywhere;
+
+  color: #8792a5;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* Garis pemisah */
+
+.dropdown-divider {
+  height: 1px;
+
+  margin: 5px 0;
+
+  background: #e8edf3;
+}
+
+.header-dark .dropdown-divider {
+  background: #2b3545;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.dropdown-logout {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #dc2626;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-logout:hover {
+  background: #fef2f2;
+}
+
+.header-dark .dropdown-logout:hover {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.dropdown-logout svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+.dropdown-logout:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Animasi dropdown */
+
+@keyframes headerDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .header {
+    left: 220px;
+    padding: 0 20px;
+  }
+
+  .header-user-info,
+  .header-chevron {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* =========================
+     SIDEBAR
+  ========================= */
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar-logo {
+    padding: 0 20px;
+  }
+
+  .sidebar-nav {
+    padding: 18px 12px;
+  }
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .header {
+    left: 220px;
+
+    padding: 0 20px;
+  }
+
+  .header-user-info,
+  .header-chevron {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* =========================
+     SIDEBAR MOBILE
+  ========================= */
+
+  .sidebar {
+    width: 72px;
+
+    transition:
+      width 0.25s ease,
+      background-color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+
+  /* =========================
+     LOGO
+  ========================= */
+
+  .sidebar-logo {
+    height: 70px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-size: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+      135deg,
+      #20c982,
+      #2585ed
+    );
+
+    color: #ffffff !important;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .logo-text::first-letter {
+    font-size: 18px;
+  }
+
+  .logo-dot {
+    display: none;
+  }
+
+
+  /* =========================
+     NAVIGATION
+  ========================= */
+
+  .sidebar-nav {
+    padding: 16px 10px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-section-title {
+    display: none;
+  }
+
+
+  /* =========================
+     SIDEBAR LINK
+  ========================= */
+
+  .sidebar-link {
+    width: 52px;
+    min-height: 44px;
+
+    margin: 0 auto 6px;
+
+    padding: 0;
+
+    justify-content: center;
+
+    gap: 0;
+
+    border-radius: 10px;
+  }
+
+  .sidebar-link > span:last-child {
+    display: none;
+  }
+
+  .sidebar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  /* =========================
+     USER FOOTER
+  ========================= */
+
+  .sidebar-footer {
+    padding: 10px;
+  }
+
+  .sidebar-user {
+    justify-content: center;
+
+    padding: 12px 0;
+  }
+
+  .sidebar-user-info {
+    display: none;
+  }
+
+  .sidebar-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  /* =========================
+     HEADER MOBILE
+  ========================= */
+
+  .header {
+    left: 72px;
+
+    height: 70px;
+
+    padding: 0 14px;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+  }
+
+  .header-title p {
+    display: none;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+
+
+  /* =========================
+     HEADER BUTTON
+  ========================= */
+
+  .theme-toggle,
+  .header-icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-toggle svg,
+  .header-icon-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  /* =========================
+     HEADER USER
+  ========================= */
+
+  .header-user {
+    margin-left: 2px;
+    padding: 2px;
+  }
+
+  .header-user-info,
+  .header-chevron {
+    display: none;
+  }
+
+  .header-avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  /* Sidebar tetap 64px */
+  .sidebar {
+    width: 64px;
+  }
+
+  .sidebar-link {
+    width: 46px;
+    min-height: 42px;
+  }
+
+  .sidebar-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  /* Header menyesuaikan Sidebar */
+  .header {
+    left: 64px;
+
+    padding: 0 10px;
+  }
+
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .header-right {
+    gap: 4px;
+  }
+
+  .theme-toggle,
+  .header-icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE SIDEBAR TOGGLE
+   Tambahkan di bagian paling bawah Components.css
+========================================================= */
+
+/* Tombol toggle disembunyikan pada desktop */
+.mobile-sidebar-toggle {
+  display: none;
+}
+
+/* Overlay di belakang sidebar */
+.mobile-sidebar-overlay {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE DRAWER
+========================================================= */
+
+@media (max-width: 700px) {
+  /* Sidebar menjadi drawer yang bisa dibuka-tutup */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+    height: 100dvh;
+
+    transform: translateX(-100%);
+    visibility: hidden;
+
+    overflow: hidden;
+
+    box-shadow: none;
+
+    transition:
+      transform 0.28s ease,
+      visibility 0.28s ease,
+      box-shadow 0.28s ease;
+
+    z-index: 1000;
+  }
+
+  /* Sidebar saat dibuka */
+  .sidebar.sidebar-mobile-open {
+    transform: translateX(0);
+    visibility: visible;
+
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.14);
+  }
+
+  /* Sembunyikan logo Sicounting pada mobile */
+  .sidebar .sidebar-logo {
+    display: none;
+  }
+
+  /* Navigasi menggunakan lebar drawer penuh */
+  .sidebar .sidebar-nav {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 22px 14px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  /* Tampilkan kembali judul kategori */
+  .sidebar .sidebar-section-title {
+    display: block;
+  }
+
+  /* Tampilkan kembali tulisan menu */
+  .sidebar .sidebar-link {
+    width: 100%;
+    min-height: 44px;
+
+    margin: 0 0 4px;
+    padding: 0 12px;
+
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .sidebar .sidebar-link > span:last-child {
+    display: inline;
+  }
+
+  .sidebar .sidebar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Footer tetap menggunakan tata letak normal */
+  .sidebar .sidebar-footer {
+    padding: 14px;
+  }
+
+  .sidebar .sidebar-user {
+    justify-content: flex-start;
+    padding: 14px 8px;
+  }
+
+  .sidebar .sidebar-user-info {
+    display: flex;
+  }
+
+  /* Overlay ketika drawer dibuka */
+  .mobile-sidebar-overlay {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.48);
+    backdrop-filter: blur(2px);
+
+    z-index: 999;
+
+    animation: mobileOverlayIn 0.2s ease;
+  }
+
+  /* Navbar menggunakan lebar layar penuh */
+  .header {
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 70px;
+
+    padding: 0 14px;
+
+    gap: 10px;
+  }
+
+  .header-left {
+    flex: 1;
+    gap: 10px;
+
+    min-width: 0;
+  }
+
+  .header-title {
+    min-width: 0;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-title p {
+    display: none;
+  }
+
+  /* Tombol toggle navbar */
+  .mobile-sidebar-toggle {
+    width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    padding: 0;
+
+    border: 1px solid;
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .header-light .mobile-sidebar-toggle {
+    background: #f8fafc;
+    border-color: #e5eaf0;
+    color: #475569;
+  }
+
+  .header-light .mobile-sidebar-toggle:hover {
+    background: #effbf5;
+    border-color: #cceee0;
+    color: #20a875;
+  }
+
+  .header-dark .mobile-sidebar-toggle {
+    background: #182130;
+    border-color: #2b3545;
+    color: #e5e7eb;
+  }
+
+  .header-dark .mobile-sidebar-toggle:hover {
+    background: #202c3d;
+    border-color: #344357;
+    color: #20c982;
+  }
+
+  .mobile-sidebar-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Area kanan navbar */
+  .header-right {
+    gap: 6px;
+  }
+
+  .theme-toggle,
+  .header-icon-button {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+  }
+
+  /* Profil cukup menampilkan avatar */
+  .header-user {
+    margin-left: 0;
+    padding: 2px;
+  }
+
+  .header-user-info,
+  .header-chevron {
+    display: none;
+  }
+
+  .header-avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .header {
+    padding: 0 9px;
+    gap: 6px;
+  }
+
+  .header-left {
+    gap: 7px;
+  }
+
+  .mobile-sidebar-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-sidebar-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-title h1 {
+    font-size: 15px;
+  }
+
+  .header-right {
+    gap: 4px;
+  }
+
+  .theme-toggle,
+  .header-icon-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .theme-toggle svg,
+  .header-icon-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-user-dropdown {
+    width: 230px;
+    max-width: calc(100vw - 75px);
+  }
+}
+
+
+/* Animasi overlay */
+
+@keyframes mobileOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
