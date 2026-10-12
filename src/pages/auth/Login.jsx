@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../../lib/supabase";
 import { Link, useNavigate } from "react-router-dom";
-import "./auth.css";
 import { useTheme } from "../../context/ThemeContext";
 import "./Auth.css";
 function Login() {
