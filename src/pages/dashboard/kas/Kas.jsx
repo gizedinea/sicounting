@@ -16,7 +16,7 @@ import { supabase } from "../../../lib/supabase";
 import {
   getKas,
   createKas,
-} from "../../service/kasservice";
+} from "../../service/kasService";
 
 import "../style.css";
 
